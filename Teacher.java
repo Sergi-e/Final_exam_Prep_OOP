@@ -1,13 +1,17 @@
-public class Teacher extends Person{
+   class Teacher extends Person{
     private String subject;
     
     public Teacher(String firstName, String lastName, int id, String subject){
         super(firstName, lastName, id);
         this.subject=subject;
+        System.out.println("Teacher constructor called for " + id);
     }
     @Override
     public String role(){
-        String teacher=" Faustin";
-        return "The teacher of: " + this.subject  + "is" + teacher;
-    }   
+        return "Teacher";
+    }
+    
+    public String getSubject(){
+        return subject;
+    }
 }
