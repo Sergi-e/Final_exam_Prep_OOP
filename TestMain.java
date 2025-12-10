@@ -7,7 +7,25 @@ public class TestMain {
         Person people[]={stud1, stud2, teach1};
 
         //displays and conditions
+        for(Person p: people){
+            //printing the class type
+            System.out.println("Class Type:" +p.getClass().getSimpleName());
 
+            //printing the full name
+            System.out.println(p.fullName());
+            System.out.println(p.role());
+
+            if(p instanceof Student){
+                Student s=(Student) p;
+                System.out.println(s.fullName() +"'s average is" + s.average());
+                System.out.println("Passed: " + s.hasPassed());
+            }
+            System.out.println("--------------------------");
+
+            if(p instanceof Teacher){
+                Teacher t = (Teacher) p;
+                System.out.println("Subject: " + t.getSubject());
+            }
+        }
     }
-    
 }
