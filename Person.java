@@ -1,4 +1,5 @@
-public class Person{
+// The class Person
+abstract class Person{
     protected String firstName;
     protected String lastName;
     protected int id;
@@ -11,5 +12,9 @@ public class Person{
         System.out.print(id);
     }
     abstract String role();
+
+    public String fullName(){
+        return firstName + lastName;    
+    }
 }
-// class Student 
+
