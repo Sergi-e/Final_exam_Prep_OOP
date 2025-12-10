@@ -4,7 +4,7 @@ public class Person{
     protected int id;
 
     //constructor
-    Person(String firstName, String lastName, int id){
+    public Person(String firstName, String lastName, int id){
         this.firstName=firstName;
         this.lastName=lastName;
         this.id=id;
