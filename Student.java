@@ -1,4 +1,4 @@
-class Student extends Person{
+class Student extends Person implements Evaluable {
     
     private double[] grades;
     private static final double PASSING_GRADE=50.0;
@@ -34,6 +34,10 @@ class Student extends Person{
             return false;
         }
         return true;
+    }
+    @Override
+    public double evaluate(){
+        return average();
     }
 }
 
